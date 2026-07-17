@@ -4,7 +4,7 @@ services:
     ports:
       - "${PORT}:8080"
     environment:
-      - PASSWORD=${PASSEORD}
+      - PASSWORD=${PASSWORD}
       - GH_TOKEN=${GH_TOKEN}
       - GH_EDITOR=code-server --wait
     volumes:
