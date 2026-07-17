@@ -1,0 +1,18 @@
+services:
+  code-server:
+    build: .
+    ports:
+      - "${PORT}:8080"
+    environment:
+      - PASSWORD=${PASSEORD}
+      - GH_TOKEN=${GH_TOKEN}
+      - GH_EDITOR=code-server --wait
+    volumes:
+      - coder_projects:/home/coder/project     # Persistenter Speicher für deine C# Projekte
+      - coder_config:/home/coder/.config       # Speichert deine VS Code Einstellungen & Extensions
+    restart: unless-stopped
+volumes:
+  coder_projects:
+    external: true
+  coder_config:
+    external: true
