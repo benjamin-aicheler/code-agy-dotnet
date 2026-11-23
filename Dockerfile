@@ -1,5 +1,5 @@
 # Coder unterstützt amd64 und arm64 im selben Tag automatisch
-FROM codercom/code-server:4.145.2-ubuntu
+FROM codercom/code-server:4.146.0-ubuntu
 
 USER root
 
